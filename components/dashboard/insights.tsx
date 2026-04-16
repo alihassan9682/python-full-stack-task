@@ -146,7 +146,7 @@ export function Insights({ contacts }: { contacts: Contact[] }) {
       </CardHeader>
       <CardContent>
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-gray-100 bg-gradient-to-b from-indigo-50/40 to-white p-4">
+          <div className="rounded-2xl border border-gray-100 bg-linear-to-b from-indigo-50/40 to-white p-4">
             <div className="mb-2 text-sm font-semibold text-gray-900">Signups (14 days)</div>
             <div className="text-xs text-gray-500">Trend line</div>
             <div className="mt-3">
@@ -154,7 +154,7 @@ export function Insights({ contacts }: { contacts: Contact[] }) {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-100 bg-gradient-to-b from-purple-50/40 to-white p-4">
+          <div className="rounded-2xl border border-gray-100 bg-linear-to-b from-purple-50/40 to-white p-4">
             <div className="mb-2 text-sm font-semibold text-gray-900">Daily volume</div>
             <div className="text-xs text-gray-500">Bar chart</div>
             <div className="mt-3">

@@ -3,6 +3,7 @@
 import { LayoutDashboard } from 'lucide-react'
 import type { Contact } from '@/lib/types'
 import { AssignmentForm } from '@/components/form'
+import { Insights } from '@/components/dashboard/insights'
 import { RecentContacts } from '@/components/dashboard/recent-contacts'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Topbar } from '@/components/ui/topbar'
@@ -27,6 +28,7 @@ export function DashboardShell({ contacts }: { contacts: Contact[] }) {
             </CardContent>
           </Card>
 
+          <Insights contacts={contacts} />
           <RecentContacts contacts={contacts} />
         </div>
       </main>

@@ -60,7 +60,7 @@ export function Modal({
   return (
     <dialog
       ref={ref}
-      className="w-[min(520px,calc(100vw-2rem))] rounded-2xl border border-gray-200 bg-white p-0 text-gray-900 shadow-2xl backdrop:bg-black/40"
+      className="fixed left-1/2 top-1/2 w-[min(520px,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-gray-200 bg-white p-0 text-gray-900 shadow-2xl backdrop:bg-black/40"
     >
       <div className="p-6">
         <div className="flex items-start justify-between gap-6">
