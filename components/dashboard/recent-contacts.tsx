@@ -4,11 +4,12 @@ import type { Contact } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { DeleteContactButton } from '@/components/dashboard/delete-contact-button'
 import { useRefresh } from '@/components/dashboard/refresh-context'
+import { cn } from '@/lib/utils'
 
-export function RecentContacts({ contacts }: { contacts: Contact[] }) {
+export function RecentContacts({ contacts, className }: { contacts: Contact[]; className?: string }) {
   const { isRefreshing } = useRefresh()
   return (
-    <Card className="mt-8">
+    <Card className={cn(className)}>
       <CardHeader className="flex flex-row items-center justify-between gap-4">
         <CardTitle className="text-xl">Recent submissions</CardTitle>
         <p className="text-sm text-gray-500">{contacts.length} total</p>

@@ -3,6 +3,7 @@
 import * as React from 'react'
 import type { Contact } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
 
 type Point = { day: string; count: number }
 
@@ -122,14 +123,14 @@ function Bars({ data }: { data: Point[] }) {
   )
 }
 
-export function Insights({ contacts }: { contacts: Contact[] }) {
+export function Insights({ contacts, className }: { contacts: Contact[]; className?: string }) {
   const series = React.useMemo(() => buildDailySeries(contacts, 14), [contacts])
   const total = contacts.length
   const last7 = series.slice(-7).reduce((acc, d) => acc + d.count, 0)
   const maxDay = series.reduce((best, d) => (d.count > best.count ? d : best), series[0]!)
 
   return (
-    <Card className="mt-8">
+    <Card className={cn(className)}>
       <CardHeader className="flex flex-row items-center justify-between gap-4">
         <CardTitle className="text-xl">Insights</CardTitle>
         <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
